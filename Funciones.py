@@ -133,6 +133,16 @@ def contar_depositos_excedidos (existencias, Max = 50000):
             provincias_excedidas += [provincia]
 
         return provincias_excedidas
+
+def corregir_error_carga (matriz, valor_erroneo, inicio = 100, paso = 10):
+    nuevo_valor = inicio
+    for i in range(len(matriz)):
+        for j in range(len(matriz[i])):
+            if matriz [i] [j] == valor_erroneo:
+                matriz [i] [j] == nuevo_valor
+                nuevo_valor += paso
+            return matriz
+    
     
     
     
